@@ -4,3 +4,4 @@ User stories:
 - As a college student, I want to be notified when I am approaching my budget limit so that I do not overspend the money that I've earned.
 - As a college student, I want to create a list of multiple budgets so that I can compare the financial plans I have for different aspects of college life.
 - As a college student, I want to delete a budget from my billing account so that I can save money or adapt to not having a need for a particular budget anymore.
+- As a college studfent, I want to be able filter out which services to include in my budget, so that I can actively update my budget paln. 
