@@ -34,29 +34,29 @@ import {
 // Assets
 import Usa from "assets/img/dashboards/usa.png";
 // Custom components
-import MiniCalendar from "components/calendar/MiniCalendar";
+//import MiniCalendar from "components/calendar/MiniCalendar";
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
 import React from "react";
 import {
-  MdAddTask,
+  //MdAddTask,
   MdAttachMoney,
   MdBarChart,
-  MdFileCopy,
+  //MdFileCopy,
 } from "react-icons/md";
 import CheckTable from "views/admin/default/components/CheckTable";
-import ComplexTable from "views/admin/default/components/ComplexTable";
-import DailyTraffic from "views/admin/default/components/DailyTraffic";
-import PieCard from "views/admin/default/components/PieCard";
-import Tasks from "views/admin/default/components/Tasks";
+//import ComplexTable from "views/admin/default/components/ComplexTable";
+//import DailyTraffic from "views/admin/default/components/DailyTraffic";
+//import PieCard from "views/admin/default/components/PieCard";
+//import Tasks from "views/admin/default/components/Tasks";
 import TotalSpent from "views/admin/default/components/TotalSpent";
 import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
 import {
   columnsDataCheck,
-  columnsDataComplex,
+  //columnsDataComplex,
 } from "views/admin/default/variables/columnsData";
 import tableDataCheck from "views/admin/default/variables/tableDataCheck.json";
-import tableDataComplex from "views/admin/default/variables/tableDataComplex.json";
+//import tableDataComplex from "views/admin/default/variables/tableDataComplex.json";
 
 export default function UserReports() {
   // Chakra Color Mode
@@ -96,7 +96,6 @@ export default function UserReports() {
           name='Spend this month'
           value='$642.39'
         />
-        <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
         <MiniStatistics
           endContent={
             <Flex me='-16px' mt='10px'>
@@ -118,32 +117,6 @@ export default function UserReports() {
           name='Your balance'
           value='$1,000'
         />
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w='56px'
-              h='56px'
-              bg='linear-gradient(90deg, #4481EB 0%, #04BEFE 100%)'
-              icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
-            />
-          }
-          name='New Tasks'
-          value='154'
-        />
-        <MiniStatistics
-          startContent={
-            <IconBox
-              w='56px'
-              h='56px'
-              bg={boxBg}
-              icon={
-                <Icon w='32px' h='32px' as={MdFileCopy} color={brandColor} />
-              }
-            />
-          }
-          name='Total Projects'
-          value='2935'
-        />
       </SimpleGrid>
 
       <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
@@ -153,18 +126,10 @@ export default function UserReports() {
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
         <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-          <DailyTraffic />
-          <PieCard />
         </SimpleGrid>
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-        <ComplexTable
-          columnsData={columnsDataComplex}
-          tableData={tableDataComplex}
-        />
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-          <Tasks />
-          <MiniCalendar h='100%' minW='100%' selectRange={false} />
         </SimpleGrid>
       </SimpleGrid>
     </Box>
