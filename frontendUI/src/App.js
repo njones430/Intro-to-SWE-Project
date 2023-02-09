@@ -22,12 +22,13 @@ import './App.css';
       </Toast>
     </>
   );
-}; */}
+};*/}
 
 const App = () => (
   <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
       <h1 className="header">Welcome Back, User</h1>
+      <Button variant="primary" style={{float: 'right'}}>Log Out</Button>
     </Container>
     <Alert></Alert>
   </Container>
