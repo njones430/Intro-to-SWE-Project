@@ -23,6 +23,16 @@ Overview
 
 The Budget
 -
+In this project's API, a budget is a configurable object that tracks various pieces of information regarding the money a user is spending on a certain product.
+The budget has several variables within its scope to track said informtaion:
+- name: a string that contains the internal name of the budget
+- displayName: a string that contains the UI display name of the budget
+- budgetFilter
+-   
+- amount: an object that contains the amount of money allocated to the budget
+- thresholdRules[]
+- allUpdatesRule
+- etag
 
 Functions
 -
