@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GoogleButton from 'react-google-button'
+import { Outlet, Link } from 'react-router-dom'
 
 export const Login = (props) => {
     const [email, setEmail] = useState('');
@@ -22,8 +23,17 @@ export const Login = (props) => {
                 <button type="submit">Log In</button>
             </form>
             {/*This will let us switch between pages register and login */}
-            
-            <GoogleButton onClick={() => { props.onFormSwitch ('go')}}/>
+                <div>
+                <a href="/signin" rel="noopener noreferrer" class="google btn">
+                <GoogleButton/>
+                </a>
+                </div>
+            {/*<li>
+            <Link to="/signin"> </Link>
+            <GoogleButton/>
+            </li>
+            <Outlet />
+            */}
             <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
         </div>
     )
