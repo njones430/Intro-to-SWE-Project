@@ -8,7 +8,10 @@ Work that we've completed for Sprint 2:
 
 Frontend Unit Tests:
 
-Frontend Cypress Tests:
+Frontend Cypress Tests: 
+- Tested if button contains desired text 
+- Clicking a button twice
+- Filling out a basic form (an email and password)
 
 Backend Unit Tests:
 
