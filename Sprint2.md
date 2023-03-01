@@ -50,7 +50,7 @@ The budget has several variables within its scope to track said informtaion:
 - name: a string that contains the internal name of the budget
 - displayName: a string that contains the UI display name of the budget
 - budgetFilter: an object that specifies which limiters should be applied to the budget to calculate the desired budget amount (ex: projects, services, time periods)
-    The budgetFilter contains variables that resemble the different limiters which are placed on the budget to calculate the desired amount:
+    Along with other variables in the budget, the budgetFilter contains objects that resemble the different limiters which are placed on the budget to calculate the desired amount:
     
     JSON representation:
     {
@@ -71,7 +71,6 @@ The budget has several variables within its scope to track said informtaion:
     string: array,
     ...
   },
-
   // Union field usage_period can be only one of the following:
   "calendarPeriod": enum (CalendarPeriod),
   "customPeriod": {
@@ -81,11 +80,40 @@ The budget has several variables within its scope to track said informtaion:
 }
     - projects[]: a group of objects which represent the projects for which the budget is being allocated to
     - creditTypes[]: a group of objects that represent the list of credit types that are used to determine the spend for threshold calculations
-    - creditTypesTreatment: the enum behavior for the credit types
+    - creditTypesTreatment: the enum behavior for the credit types that specifies how credits are applied when determining the spend for threshold calculations (Enums: CREDIT_TYPES_TREATMENT_UNSPECIFIED, INCLUDE_ALL_CREDITS, EXCLUDE_ALL_CREDITS, INCLUDE_SPECIFIED_CREDITS)
     - services[]: a group of objects which represent the services for which the budget is being allocated to
     - subaccounts[]: a group of objects which represent the subaccounts for which the budget is being allocated to
     - labels: a key and value pair that ensures that only resources from this specific filter are applied to the budget
+    - calendarPeriod: the enum behavior that specifies the start of the time period over which the budget has existed (Enums: CALENDAR_PERIOD_UNSPECIFIED, MONTH, QUARTER, YEAR)
+    - customPeriod: an object representing a custom time period over which the budget has existed
+    
+        JSON representation:
+        {
+          "startDate": {
+          object (Date)
+          },
+          "endDate": {
+          object (Date)
+          }
+        }     
+        The startDate object represents the date on which the budget's time period begins, while the endDate object represents the date on which the budget's           time period ends.
 - amount: an object that contains the amount of money allocated to the budget
+    
+    JSON representation:
+    {
+
+  // Union field budget_amount can be only one of the following:
+  "specifiedAmount": {
+    object (Money)
+  },
+  "lastPeriodAmount": {
+    object (LastPeriodAmount)
+  }
+  // End of list of possible types for union field budget_amount.
+}
+    - specifiedAmount: an object that represents the specific amount of money allocated to the budget for total usage
+    - lastPeriodAmount: an object thhat represents the specific amount of money allocated to the budget for total usage for the previous calendar period
+    
 - thresholdRules[]: a group of objects that represent rules which, when broken, alert users that they have surpassed a limit the user has placed on the current budget
 - allUpdatesRule: a object that represents rules which are applied to the notifications users recieve about their budget spending and limiters.
 - etag: a string that verifies that the budget is unchanged for a read-write-modify operation; if the etag is empty, an update is initiated to overwrite other changes.
