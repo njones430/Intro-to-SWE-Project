@@ -1,11 +1,8 @@
-module golang-sso
+module example/hello
 
 go 1.20
 
-require (
-	github.com/joho/godotenv v1.5.1
-	golang.org/x/oauth2 v0.5.0
-)
+require golang.org/x/oauth2 v0.5.0
 
 require (
 	cloud.google.com/go/compute/metadata v0.2.0 // indirect

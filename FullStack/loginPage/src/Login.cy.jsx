@@ -1,5 +1,6 @@
 import React from 'react'
 import { Login } from './Login'
+//type cypress open to launch
 
 describe('<Login />', () => {
   it('register link should contain appropiate text ', () => {
