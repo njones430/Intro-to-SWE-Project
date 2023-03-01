@@ -16,15 +16,15 @@ export const Login = (props) => {
             <h1>StudentSaver</h1>
             <h2>Login</h2>
             <form className="login-form" onSubmit={handleSubmit}>
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className="email">Email</label>
                 <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password" className="password">Password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="yourPW" id="password" name="password" />
                 <button type="submit">Log In</button>
             </form>
             {/*This will let us switch between pages register and login */}
                 <div>
-                <a href="/signin" rel="noopener noreferrer" class="google btn">
+                <a href="/signin" rel="noopener noreferrer" class="google btn" className="google-btn">
                 <GoogleButton/>
                 </a>
                 </div>
@@ -34,7 +34,7 @@ export const Login = (props) => {
             </li>
             <Outlet />
             */}
-            <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
+            <button className="link-btn" data-cy = "link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
         </div>
     )
 }
