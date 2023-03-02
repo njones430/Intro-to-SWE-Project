@@ -12,8 +12,8 @@ Frontend Unit Tests:
 
 Frontend Cypress Tests: 
 - Tested if button contains desired text 
-- Clicking a button twice
-- Filling out a basic form (an email and password)
+- Clicking register-login button twice
+- Filling out a basic form (an email and password) automatically
 
 Backend Unit Tests:
 - Test that the setup for the Google integration with the backend is working correctly (constants_test.go)
