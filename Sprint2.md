@@ -11,6 +11,8 @@ Frontend Unit Tests:
 - Ensured that the submit button was present on the login page
 - Tested if Google's "sign-in" button rendered when our login page loads
 - Test to see if UI renders without crashing
+- Test to see if user input is stored correctly
+- Test to see if user information is deleted properly
 
 Frontend Cypress Tests: 
 - Tested if button contains desired text 
