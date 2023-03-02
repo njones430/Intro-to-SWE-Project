@@ -4,7 +4,13 @@ import Toast from 'react-bootstrap/Toast';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Input from './components/budgetcreate';
-import Alert from './components/alert';
+import ReactDOM from 'react-dom';
+import Nav from './components/navbar';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import Budget from './saver/budget';
+import Budget2 from './saver/budget2';
+import Budget3 from './saver/budget3';
 
 import './App.css';
 
@@ -30,7 +36,14 @@ const App = () => (
       <h1 className="header">Welcome Back, User</h1>
       <Button variant="primary" style={{float: 'right'}}>Log Out</Button>
     </Container>
-    <Alert></Alert>
+    <Router>
+    <Nav></Nav>
+    <Routes>
+        <Route path='/budget' element={<Budget/>} />
+        <Route path='/budget2' element={<Budget2/>} />
+        <Route path='/budget3' element={<Budget3/>} />
+    </Routes>
+    </Router>
   </Container>
 );
 
