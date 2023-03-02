@@ -8,9 +8,9 @@ import ReactDOM from 'react-dom';
 import Nav from './components/navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
-import Budget1 from './pages/budget1';
-import Budget2 from './pages/budget2';
-import Budget3 from './pages/budget3';
+import Budget from './saver/budget';
+import Budget2 from './saver/budget2';
+import Budget3 from './saver/budget3';
 
 import './App.css';
 
@@ -39,7 +39,7 @@ const App = () => (
     <Router>
     <Nav></Nav>
     <Routes>
-        <Route path='/budget1' element={<Budget1/>} />
+        <Route path='/budget' element={<Budget/>} />
         <Route path='/budget2' element={<Budget2/>} />
         <Route path='/budget3' element={<Budget3/>} />
     </Routes>
