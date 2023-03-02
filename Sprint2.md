@@ -4,11 +4,13 @@ Sprint 2
 Work that we've completed for Sprint 2:
 - Retooled backend to be more developer friendly
 - Linked our React Login page with Google's SSO via Oauth 
+- Added functionality to create and delete multiple budgets
 - Implemented functionality between frontend and backend
 
 Frontend Unit Tests:
 - Ensured that the submit button was present on the login page
 - Tested if Google's "sign-in" button rendered when our login page loads
+- Test to see if UI renders without crashing
 
 Frontend Cypress Tests: 
 - Tested if button contains desired text 
