@@ -146,11 +146,111 @@ Functions
 -
 The API contains five distinct functions: create, delete, get, list and patch. Each of these functions has an outlined JSON representation and internal variables which are elaborated on below.
 
-- create:
-- delete:
-- get:
-- list:
-- patch:
+- create: creates a new budget 
+  - Path parameters: parent (a string that contains the name of the account that the budget is created in)
+
+  JSON representation:
+  {
+  "budget": {
+    object (Budget)
+    }
+  }
+    - budget: the new budget being created
+
+- delete: deletes an existing budget; returns successfully if the budget was already deleted
+  - Path parameters: parent (a string that contains the name of the account that the budget is deleted in)
+
+  JSON representation: request and response body are empty if deleted successfully
+  
+- get: returns an existing budget
+  - Path parameters: parent (a string that contains the name of the account that the budget is deleted in)
+
+  JSON representation: request body is empty, response body contains the budget being returned
+  
+- list: returns a list of budgets for a specific billing account
+  - Path parameters: parent (a string that contains the name of the account that the list of budgets is derived from)
+  - Query parameters: pageSize (an integer that contains the maximum number of budgets to return for each page), pageToken (a string which indicates whether the list is a continuation of the last call of the list function)
+ 
+  JSON representation:
+  {
+  "budgets": [
+    {
+      object (Budget)
+    }
+  ],
+  "nextPageToken": string
+}
+  - budgets[]: a group of objects representing the list of budgets which belong to the billing account being accessed
+  - nextPageToken: a string that indicates whether the list is a continuation of a prexisting call of the list function
+  
+- patch: updates the budget and returns it after the changes are made
+  - Path parameters: budget.name (a string that contains the name of the budget being updated)
+  
+  JSON representation:
+  {
+  "budget": {
+    "name": string,
+    "displayName": string,
+    "budgetFilter": {
+      "projects": [
+        string
+      ],
+      "creditTypes": [
+        string
+      ],
+      "creditTypesTreatment": enum (CreditTypesTreatment),
+      "services": [
+        string
+      ],
+      "subaccounts": [
+        string
+      ],
+      "labels": {
+        string: array,
+        ...
+      },
+
+      // Union field usage_period can be only one of the following:
+      "calendarPeriod": enum (CalendarPeriod),
+      "customPeriod": {
+        object (CustomPeriod)
+      }
+      // End of list of possible types for union field usage_period.
+    },
+    "amount": {
+
+      // Union field budget_amount can be only one of the following:
+      "specifiedAmount": {
+        object (Money)
+      },
+      "lastPeriodAmount": {
+        object (LastPeriodAmount)
+      }
+      // End of list of possible types for union field budget_amount.
+    },
+    "thresholdRules": [
+      {
+        "thresholdPercent": number,
+        "spendBasis": enum (Basis)
+      }
+    ],
+    "allUpdatesRule": {
+      "pubsubTopic": string,
+      "schemaVersion": string,
+      "monitoringNotificationChannels": [
+        string
+      ],
+      "disableDefaultIamRecipients": boolean
+    },
+    "etag": string
+  },
+  "updateMask": string
+}
+- updateMask: a string that specifies which variables in the budget need to be updated
+- The other variables present in the scope of patch can be seen documented above in the "The Budget" section
+
+**Project API documentation was created with Google's official documentation on the API as a resource (https://cloud.google.com/billing/docs/reference/budget/rest/)
+
 
 
 
