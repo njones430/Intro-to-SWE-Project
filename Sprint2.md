@@ -7,6 +7,8 @@ Work that we've completed for Sprint 2:
 - Implemented functionality between frontend and backend
 
 Frontend Unit Tests:
+- Ensured that the submit button was present on the login page
+- Tested if Google's "sign-in" button rendered when our login page loads
 
 Frontend Cypress Tests: 
 - Tested if button contains desired text 
