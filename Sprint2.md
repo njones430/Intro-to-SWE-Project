@@ -20,9 +20,11 @@ Frontend Cypress Tests:
 - Filling out a basic form (an email and password) automatically
 
 Backend Unit Tests:
-- Test that the setup for the Google integration with the backend is working correctly (constants_test.go)
-- Test that the Google login process works correctly with the expected credentials (google_test.go)
-- Test that the callback function of the Google integration works correctly (google_test.go)
+- Test that the backend processes a correct response for the Client ID credential of the oauth2 authentication system (constants_test.go)
+- Test that the backend processes a correct response for the ClientSecret credential of the oauth2 authentication system (constants_test.go)
+- Test that the backend processes a correct response for the RedirectID credential of the oauth2 authentication system (constants_test.go)
+- Test that the backend processes a correct set of responses for the Scopes credential of the oauth2 authentication system (constants_test.go)
+- Test that the backend processes a correct response for the Endpoint credential of the oauth2 authentication system (constants_test.go)
 - Test that the Oauth cookie authentication for the login page is completed successfully via Google's SSO (cookie_test.go)
 
 Backend Documentation:
