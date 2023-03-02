@@ -20,12 +20,12 @@ export const Login = (props) => {
                 <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
                 <label htmlFor="password" className="password">Password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="yourPW" id="password" name="password" />
-                <button type="submit">Log In</button>
+                <button type="submit" >Log In</button>
             </form>
             {/*This will let us switch between pages register and login */}
                 <div>
                 <a href="/google/login" rel="noopener noreferrer" class="google btn" className="google-btn">
-                <GoogleButton/>
+                <GoogleButton data-testid="googleBtn" id ="googleBtn"/>
                 </a>
                 </div>
             {/*<li>
