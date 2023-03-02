@@ -115,11 +115,42 @@ The budget has several variables within its scope to track said informtaion:
     - lastPeriodAmount: an object thhat represents the specific amount of money allocated to the budget for total usage for the previous calendar period
     
 - thresholdRules[]: a group of objects that represent rules which, when broken, alert users that they have surpassed a limit the user has placed on the current budget
+    
+    JSON representation:
+    {
+  "thresholdPercent": number,
+  "spendBasis": enum (Basis)
+    }
+    - thresholdPercent: an object representing the budget spending percentage which should trigger an alert when surpassed
+    - spendBasis: the enum behavior representing the basis used to determine if the total amount of spending has passed the threshold rule (Enums: BASIS_UNSPECIFIED, CURRENT_SPEND, FORECASTED_SPEND)
+   
 - allUpdatesRule: a object that represents rules which are applied to the notifications users recieve about their budget spending and limiters.
+    
+    JSON representation:
+    {
+  "pubsubTopic": string,
+  "schemaVersion": string,
+  "monitoringNotificationChannels": [
+    string
+  ],
+  "disableDefaultIamRecipients": boolean
+    }
+    - pubsubTopic: a string that contains the name of the Pub/Sub topic where budget-related messages will be sent
+    - schemaVersion; a string that represents the schema version of the notification sent to a user about budget spending and limiters
+    - monitoringNotificationChannels: a group of strings that represents the different selection of channels to send notifications to when a threshold is exceeded
+    - disableDefaultIamRecipients: a boolean that disables default notifications sent to Billing Account Administrators and Billing Account Users (IAM) when set to true
+    
 - etag: a string that verifies that the budget is unchanged for a read-write-modify operation; if the etag is empty, an update is initiated to overwrite other changes.
 
 Functions
 -
+The API contains five distinct functions: create, delete, get, list and patch. Each of these functions has an outlined JSON representation and internal variables which are elaborated on below.
+
+- create:
+- delete:
+- get:
+- list:
+- patch:
 
 
 
