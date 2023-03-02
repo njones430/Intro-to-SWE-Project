@@ -2,7 +2,7 @@ Sprint 2
 -
 
 Work that we've completed for Sprint 2:
-- Creating a new budget
+- Retooled backend to be more developer friendly
 - Linked our React Login page with Google's SSO via Oauth 
 - Implemented functionality between frontend and backend
 
@@ -14,6 +14,10 @@ Frontend Cypress Tests:
 - Filling out a basic form (an email and password)
 
 Backend Unit Tests:
+- Test that the setup for the Google integration with the backend is working correctly (constants_test.go)
+- Test that the Google login process works correctly with the expected credentials (google_test.go)
+- Test that the callback function of the Google integration works correctly (google_test.go)
+- Test that the Oauth cookie authentication for the login page is completed successfully via Google's SSO (cookie_test.go)
 
 Backend Documentation:
 
