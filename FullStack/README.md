@@ -3,7 +3,7 @@ Download GO
 Downlaod NodeJS
 Download Cypress: https://docs.cypress.io/guides/getting-started/installing-cypress 
 	Cd …\Intro-to-SWE-Project\FullStack\loginPage\src
-npm install cypress --save-dev
+	npm install cypress --save-dev
 
 Must load npm start before you run the go command 
 
