@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Routes, Route}
 import Budget from './saver/budget';
 import Budget2 from './saver/budget2';
 import Budget3 from './saver/budget3';
+import Profile from './saver/profile';
 
 import './App.css';
 
@@ -33,7 +34,7 @@ import './App.css';
 const App = () => (
   <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
-      <h1 className="header">Welcome Back, User</h1>
+      <h1 className="header">Student Saver</h1>
       <Button variant="primary" style={{float: 'right'}}>Log Out</Button>
     </Container>
     <Router>
@@ -42,6 +43,7 @@ const App = () => (
         <Route path='/budget' element={<Budget/>} />
         <Route path='/budget2' element={<Budget2/>} />
         <Route path='/budget3' element={<Budget3/>} />
+        <Route path='/profile' element={<Profile/>} />
     </Routes>
     </Router>
   </Container>
