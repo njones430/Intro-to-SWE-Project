@@ -11,8 +11,6 @@ Work that we've completed for Sprint 3:
 
 Sprint 3 Frontend Unit Tests:
 
-Sprint 3 Frontend Cypress Tests: 
-
 Sprint 3 Backend Unit Tests:
 
 Backend Documentation:
