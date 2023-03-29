@@ -19,6 +19,10 @@ Sprint 3 Frontend Unit Tests:
 
 -Tests for calculation of monthly profit/loss
 
+-Tests for calculations using hourly/weekly wage
+
+-Tests for calculating budget for the whole year
+
 Sprint 3 Backend Unit Tests:
 
 Backend Documentation:
