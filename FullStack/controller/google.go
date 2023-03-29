@@ -46,6 +46,8 @@ func GoogleCallback(res http.ResponseWriter, req *http.Request) {
 	left, right, isok = strings.Cut(string(right), "\"")
 	isok = isok
 	//EFFICENCY ! 100% !
-	fmt.Fprintln(res, left) //unit test returns right string
+	//fmt.Fprintln(res, left) //unit test returns right string
+	http.Redirect(res, req, "localhost:3000", http.StatusSeeOther)
+
 
 }
