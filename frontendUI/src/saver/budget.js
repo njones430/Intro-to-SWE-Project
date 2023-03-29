@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
+import Alert from 'react-bootstrap/Alert';
 import ReactDOM from 'react-dom';
 import FormControl from 'react-bootstrap/FormControl';
 import Container from 'react-bootstrap/Container';
@@ -30,7 +31,13 @@ function Budget() {
 
   const create = () => {
     localStorage.setItem("active1", 1);
+    localStorage.setItem("edit1", 1);
   };
+
+  const edit = () => {
+    localStorage.removeItem("edit1");
+    window.location.reload(false);
+  }
 
   if (localStorage.getItem("active1") === null)
   {
@@ -84,8 +91,75 @@ function Budget() {
     </>
   );
   }
+  if (localStorage.getItem("edit1") === null)
+  {
   return (
     <>
+  <>
+  <Form>
+      <Form.Text id="passwordHelpBlock" muted>
+        Your orignal budget information is shown as the default.
+      </Form.Text>
+    <Form.Group className="mb-3" controlId="name">
+      <Form.Label>Budget Name</Form.Label>
+      <FormControl type="text" placeholder={localStorage.getItem("name1")}
+      ref={textInput} onChange={() => localStorage.setItem("name1", textInput.current.value)}/>
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="tuition">
+      <Form.Label>How much is your tuition this year?</Form.Label>
+      <Form.Control type="number" placeholder={localStorage.getItem("cost1")}
+      ref={textInput2} onChange={() => localStorage.setItem("cost1", textInput2.current.value)}/>
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="rent">
+      <Form.Label>What is your monthly rent?</Form.Label>
+      <Form.Control type="number" placeholder={localStorage.getItem("rent1")}
+      ref={textInput3} onChange={() => localStorage.setItem("rent1", textInput3.current.value)}/>
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="books">
+      <Form.Label>How much are your textbooks?</Form.Label>
+      <Form.Control type="number" placeholder={localStorage.getItem("book1")}
+      ref={textInput4} onChange={() => localStorage.setItem("book1", textInput4.current.value)}/>
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="wage">
+      <Form.Label>If you have a job, what is your weekly rate?</Form.Label>
+      <Form.Control type="number" placeholder={localStorage.getItem("wage1")}
+      ref={textInput5} onChange={() => localStorage.setItem("wage1", textInput5.current.value)}/>
+    </Form.Group>
+
+    <Form.Group className="mb-3" controlId="scholarship">
+      <Form.Label>How much money did you earn in scholarships this year?</Form.Label>
+      <Form.Control type="number" placeholder={localStorage.getItem("scholar1")}
+      ref={textInput6} onChange={() => localStorage.setItem("scholar1", textInput6.current.value)}/>
+    </Form.Group>
+
+    <Button variant="primary" type="submit"
+    onClick={() => create()}
+    >
+      Update
+    </Button>
+  </Form>
+  </>
+    </>
+  );
+  }
+  var money = (Number(localStorage.getItem("cost1"))/-6) - Number(localStorage.getItem("rent1")) - (Number(localStorage.getItem("book1"))/6) + (Number(localStorage.getItem("wage1"))*4) + (Number(localStorage.getItem("scholar1"))/6);
+  var alert;
+  if (money > 0) {
+    alert = <Alert key='success' variant='success'>
+    You have a monthly gain of +${money.toFixed(2)}!
+  </Alert>;
+  } else {
+    alert = <Alert key='danger' variant='danger'>
+    You have a monthly loss of -${money.toFixed(2)}.
+  </Alert>;
+  }
+  return (
+    <>
+    {alert}
         <Table striped bordered hover>
       <thead>
         <tr>
@@ -117,6 +191,7 @@ function Budget() {
       </tbody>
     </Table>
     <Button onClick={() => deletion()}>Delete</Button>{' '}
+    <Button onClick={() => edit()}>Edit</Button>{' '}
     </>
   );
 }
