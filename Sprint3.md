@@ -11,6 +11,8 @@ Work that we've completed for Sprint 3:
 
 -Streamlined Google API integration with frontend so that transition from the login page to the budget page is seamless
 
+-Wrote partial code for backend budget functions (budget.go), variables (data.go & loadVariables.go), budget struct (budgetModel.go) - to be finished in Sprint 4 
+
 Sprint 3 Frontend Unit Tests:
 
 -Tests for updating profile/budget information
