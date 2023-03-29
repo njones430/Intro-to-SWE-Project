@@ -33,13 +33,13 @@ func deleteBudget(c *gin.Context) {
 }
 
 func getBudget(c *gin.Context) {
-
+//To be continued with frontend progress
 }
 
 func listBudget(c *gin.Context) {
-
+//To be continued with frontend progress
 }
 
 func patchBudget(c *gin.Context) {
-
+//To be continued with frontend progress
 }
