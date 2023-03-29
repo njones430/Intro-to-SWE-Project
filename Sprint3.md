@@ -9,6 +9,8 @@ Work that we've completed for Sprint 3:
 
 -Budget page shows total money coming in/out monthly 
 
+-Streamlined Google API integration with frontend so that transition from the login page to the budget page is seamless
+
 Sprint 3 Frontend Unit Tests:
 
 Sprint 3 Backend Unit Tests:
