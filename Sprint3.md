@@ -2,8 +2,11 @@ Sprint 3
 -
 
 Work that we've completed for Sprint 3:
+
 -Added a user profile page
+
 -Added edit functionality for budget pages
+
 -Budget page shows total money coming in/out monthly 
 
 Sprint 3 Frontend Unit Tests:
