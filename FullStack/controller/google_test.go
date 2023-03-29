@@ -1,5 +1,0 @@
-package google
-
-import (
-  "testing"
-)
