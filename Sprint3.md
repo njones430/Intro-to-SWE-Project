@@ -13,6 +13,10 @@ Work that we've completed for Sprint 3:
 
 Sprint 3 Frontend Unit Tests:
 
+-Tests for updating profile/budget information
+
+-Tests for calculation of monthly profit/loss
+
 Sprint 3 Backend Unit Tests:
 
 Backend Documentation:
