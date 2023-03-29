@@ -10,5 +10,5 @@ func main() {
 	http.Handle("/", fs)
 	http.HandleFunc("/google/login", controller.GoogleLogin)
 	http.HandleFunc("/google/callback", controller.GoogleCallback)
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":3006", nil)
 }
