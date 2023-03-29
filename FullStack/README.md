@@ -7,6 +7,8 @@ Download Cypress: https://docs.cypress.io/guides/getting-started/installing-cypr
 	Cd …\Intro-to-SWE-Project\FullStack\loginPage\src
 	
 	npm install cypress --save-dev
+	
+Download Axios
 
 Must load npm start before you run the go command 
 
