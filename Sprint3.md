@@ -24,6 +24,8 @@ Sprint 3 Frontend Unit Tests:
 -Tests for calculating budget for the whole year
 
 Sprint 3 Backend Unit Tests:
+- Test that the backend processes a correct set of responses for the Scopes credential of the oauth2 authentication system (This test had limited functionality in Sprint 2 and was expanded on to work with full functionality in Sprint 3)
+- Test that the backend processes a correct set of responses for the Endpoint credential of the oauth2 authentication system (This test had limited functionality in Sprint 2 and was expanded on to work with full functionality in Sprint 3)
 
 Backend Documentation:
 
