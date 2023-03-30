@@ -15,13 +15,13 @@ Work that we've completed for Sprint 3:
 
 Sprint 3 Frontend Unit Tests:
 
--Tests for updating profile/budget information
+- Tests for updating profile/budget information
 
--Tests for calculation of monthly profit/loss
+- Tests for calculation of monthly profit/loss
 
--Tests for calculations using hourly/weekly wage
+- Tests for calculations using hourly/weekly wage
 
--Tests for calculating budget for the whole year
+- Tests for calculating budget for the whole year
 
 Sprint 3 Backend Unit Tests:
 - Test that the backend processes a correct set of responses for the Scopes credential of the oauth2 authentication system (This test had limited functionality in Sprint 2 and was expanded on to work with full functionality in Sprint 3)
