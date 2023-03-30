@@ -2,8 +2,7 @@ package config
 
 import (
 	"testing"
-
-
+	"golang.org/x/oauth2/google"
 )
 
 func TestSetupConfig(t *testing.T) {
@@ -39,6 +38,6 @@ func TestSetupConfig4(t *testing.T) {
   got := SetupConfig().Endpoint;
   want :=  google.Endpoint
   if got != want {
-    t.Errorf("got %s, wanted %s", got, want)
+    t.Errorf("got %v, wanted %v", got, want)
 }
 }
