@@ -2,12 +2,26 @@ package controller
 
 import (
 	"context"
+	"encoding/json"
 	"example/hello/config"
 	"fmt"
 	"io"
 	"net/http"
 	"strings"
 )
+
+type Budget struct {
+	Name         string `json:"name"`
+	Tuition      string `json:"address"`
+	Rent         string `json:"rent"`
+	Textbookcost string `json:"textbookcost"`
+	Payrate      string `json:"payrate"`
+	Grant        string `json:"grant"`
+}
+
+var currentuser = ""
+
+var m = make(map[string]Budget)
 
 func GoogleLogin(res http.ResponseWriter, req *http.Request) {
 	googleConfig := config.SetupConfig()
@@ -47,7 +61,30 @@ func GoogleCallback(res http.ResponseWriter, req *http.Request) {
 	isok = isok
 	//EFFICENCY ! 100% !
 	//fmt.Fprintln(res, left) //unit test returns right string
-	http.Redirect(res, req, "localhost:3000", http.StatusSeeOther)
+	currentuser = left
+	_, ok := m[currentuser]
+	if !ok {
 
+		m[currentuser] = Budget{
+			Name:         "ufstudent",
+			Tuition:      "10",
+			Rent:         "20",
+			Textbookcost: "30",
+			Payrate:      "40",
+			Grant:        "50",
+		}
+	}
 
+	http.Redirect(res, req, "http://localhost:3000/api/getBudget", http.StatusSeeOther)
+
+}
+func ReadDataIncident(res http.ResponseWriter, req *http.Request) {
+	jsonString, err := json.Marshal(m[currentuser])
+	if err != nil {
+		http.Error(res, err.Error(), http.StatusInternalServerError)
+		return
+	}
+	res.Header().Set("Content-Type", "application/json")
+	res.Write(jsonString)
+	http.Redirect(res, req, "http://localhost:3006", http.StatusSeeOther)
 }
