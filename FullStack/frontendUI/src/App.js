@@ -12,6 +12,7 @@ import Budget from './saver/budget';
 import Budget2 from './saver/budget2';
 import Budget3 from './saver/budget3';
 import Profile from './saver/profile';
+import Testfile from './saver/testfile';
 
 import './App.css';
 
@@ -44,6 +45,7 @@ const App = () => (
         <Route path='/budget2' element={<Budget2/>} />
         <Route path='/budget3' element={<Budget3/>} />
         <Route path='/profile' element={<Profile/>} />
+        <Route path='/testfile' element={<Testfile/>} />
     </Routes>
     </Router>
   </Container>
