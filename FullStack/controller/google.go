@@ -73,6 +73,7 @@ type Budget struct {
 	Grant        string `json:"grant"`
 }
 
+var iswritten = false
 var currentuser = ""
 var m = make(map[string]Budget)
 
@@ -127,16 +128,19 @@ func GoogleCallback(res http.ResponseWriter, req *http.Request) {
 		}
 	}
 	//fmt.Fprintln(res, left) //unit test returns right string
-	http.Redirect(res, req, "http://localhost:3000/api/getBudget", http.StatusSeeOther)
+	http.Redirect(res, req, "http://localhost:3001/testfile", http.StatusSeeOther)
 
 }
 func ReadDataIncident(res http.ResponseWriter, req *http.Request) {
+
 	jsonString, err := json.Marshal(m[currentuser])
 	if err != nil {
 		http.Error(res, err.Error(), http.StatusInternalServerError)
 		return
 	}
+
 	res.Header().Set("Content-Type", "application/json")
+	res.Header().Set("Access-Control-Allow-Origin", "*")
 	res.Write(jsonString)
-	//http.Redirect(res, req, "http://localhost:3006", http.StatusSeeOther)
+
 }
