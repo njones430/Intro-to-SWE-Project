@@ -36,7 +36,9 @@ const App = () => (
   <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
       <h1 className="header">Student Saver</h1>
+      <a href="http://localhost:3000/google/login" rel="noopener noreferrer" class="google btn" className="google-btn">
       <Button variant="primary" style={{float: 'right'}}>Log Out</Button>
+      </a>
     </Container>
     <Router>
     <Nav></Nav>
