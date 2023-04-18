@@ -24,7 +24,7 @@ export const Login = (props) => {
             </form>
             {/*This will let us switch between pages register and login */}
                 <div>
-                <a href="/google/login" rel="noopener noreferrer" class="google btn" className="google-btn">
+                <a href="http://localhost:3000/google/login" rel="noopener noreferrer" class="google btn" className="google-btn">
                 <GoogleButton data-testid="googleBtn" id ="googleBtn"/>
                 </a>
                 </div>
