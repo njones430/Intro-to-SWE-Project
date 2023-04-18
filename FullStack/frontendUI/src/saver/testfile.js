@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
+import Alert from 'react-bootstrap/Alert';
 import ReactDOM from 'react-dom';
 import FormControl from 'react-bootstrap/FormControl';
 import Container from 'react-bootstrap/Container';
@@ -15,6 +16,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
+
+import Budget from './budget';
+
+
 
 function Testfile() {
 
@@ -65,7 +70,35 @@ useEffect(() => {
 if (!data) {
   return <div>Loading data...</div>;
 }
+const name1 = localStorage.getItem('name1');
+const cost1 = localStorage.getItem('cost1');
+const rent1 = localStorage.getItem('rent1');
+const book1 = localStorage.getItem('book1');
+const wage1 = localStorage.getItem('wage1');
+const scholar1 = localStorage.getItem('scholar1');
 
+if(name1==null){ 
+  data.name=name1;
+}
+if (cost1!=null){// we get the default values
+  data.name=name1;
+  data.address = cost1; // this is actually addres butthis is temp
+  data.rent=rent1;
+  data.textbookcost = book1;
+  data.payrate = wage1;
+  data.grant = scholar1;
+}
+var money = (Number(localStorage.getItem("cost1"))/-6) - Number(localStorage.getItem("rent1")) - (Number(localStorage.getItem("book1"))/6) + (Number(localStorage.getItem("wage1"))*4) + (Number(localStorage.getItem("scholar1"))/6);
+var alert;
+if (money > 0) {
+  alert = <Alert key='success' variant='success'>
+  You have a monthly gain of +${money.toFixed(2)}!
+</Alert>;
+} else {
+  alert = <Alert key='danger' variant='danger'>
+  You have a monthly loss of -${money.toFixed(2)}.
+</Alert>;
+}
 return (
   
   <div>
@@ -76,7 +109,40 @@ return (
     <p>{data.textbookcost}</p>
     <p>{data.payrate}</p>
     <p>{data.grant}</p>
+    <>
     
+    {alert}
+        <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>{data.name}</th>
+          <th>Budget Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tuition</td>
+          <td>-${data.address}</td>
+        </tr>
+        <tr>
+          <td>Monthly Rent</td>
+          <td>-${data.rent}</td>
+        </tr>
+        <tr>
+          <td>Textbooks</td>
+          <td>-${data.textbookcost}</td>
+        </tr>
+        <tr>
+          <td>Weekly Wage</td>
+          <td>+${data.payrate}</td>
+        </tr>
+        <tr>
+          <td>Scholarship</td>
+          <td>+${data.grant}</td>
+        </tr>
+      </tbody>
+    </Table>
+    </>
   </div>
 );
 }
