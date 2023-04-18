@@ -120,11 +120,11 @@ func GoogleCallback(res http.ResponseWriter, req *http.Request) {
 
 		m[currentuser] = Budget{
 			Name:         currentuser,
-			Tuition:      "10",
-			Rent:         "20",
-			Textbookcost: "30",
-			Payrate:      "40",
-			Grant:        "50",
+			Tuition:      m[currentuser].Tuition,
+			Rent:         m[currentuser].Rent,
+			Textbookcost: m[currentuser].Textbookcost,
+			Payrate:      m[currentuser].Payrate,
+			Grant:        m[currentuser].Grant ,
 		}
 	}
 	//fmt.Fprintln(res, left) //unit test returns right string
