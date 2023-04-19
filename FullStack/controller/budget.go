@@ -1,5 +1,6 @@
 package controller
 
+/*
 import (
 	"initializers"
 	"models"
@@ -43,3 +44,4 @@ func listBudget(c *gin.Context) {
 func patchBudget(c *gin.Context) {
 //To be continued with frontend progress
 }
+*/
