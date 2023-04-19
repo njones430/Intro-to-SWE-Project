@@ -124,11 +124,11 @@ func GoogleCallback(res http.ResponseWriter, req *http.Request) {
 			Rent:         m[currentuser].Rent,
 			Textbookcost: m[currentuser].Textbookcost,
 			Payrate:      m[currentuser].Payrate,
-			Grant:        m[currentuser].Grant ,
+			Grant:        m[currentuser].Grant,
 		}
 	}
 	//fmt.Fprintln(res, left) //unit test returns right string
-	http.Redirect(res, req, "http://localhost:3001/testfile", http.StatusSeeOther)
+	http.Redirect(res, req, "http://localhost:3001/budget", http.StatusSeeOther)
 
 }
 func ReadDataIncident(res http.ResponseWriter, req *http.Request) {
