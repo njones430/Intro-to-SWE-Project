@@ -6,7 +6,6 @@ function Navigate() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -14,7 +13,6 @@ function Navigate() {
             <Nav.Link href="/budget2">Budget 2</Nav.Link>
             <Nav.Link href="/budget3">Budget 3</Nav.Link>
             <Nav.Link href="/profile">Profile</Nav.Link>
-            <Nav.Link href="/testfile">Budget Summary</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
