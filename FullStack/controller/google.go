@@ -60,7 +60,9 @@ import (
 	"example/hello/config"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -127,6 +129,21 @@ func GoogleCallback(res http.ResponseWriter, req *http.Request) {
 			Grant:        m[currentuser].Grant,
 		}
 	}
+	os.Remove("frontendUI/src/load.txt")
+	f, err := os.Create("frontendUI/src/load.txt")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer f.Close()
+
+	_, err2 := f.WriteString(currentuser)
+
+	if err2 != nil {
+		log.Fatal(err2)
+	}
+
 	//fmt.Fprintln(res, left) //unit test returns right string
 	http.Redirect(res, req, "http://localhost:3001/budget", http.StatusSeeOther)
 
