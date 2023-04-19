@@ -4,6 +4,7 @@ Sprint 4
 Work that we've completed for Sprint 4:
 
 - Implemented new Rest-style API for data
+- Recreated API documentation for new API
 - Added functionality for "log-out" button
 - Retooled navigation for website (back/forward buttons)
 
