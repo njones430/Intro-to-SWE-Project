@@ -32,3 +32,18 @@ Running The Application
 
 Using The Application
 -
+14. Begin using the application by creating an account with an email and password or a preexisting Google Account with the "Sign In with Google" button.
+15. If your account is tied to an email and password, click the Log In button after entering your information to get started.
+16. If your account is tied to a Google Account, select your Google account and login with your Google Account password to begin.
+17. After logging into the Home Screen, begin creating a Budget by clicking on any of the Budget subheadings: "Budget 1", "Budget 2" or "Budget 3".
+18. Once you have clicked a Budget subheading, the page will prompt you to create a Budget by entering several pieces of information into text boxes that indicate what information that you must enter to create the Budget. Enter said information into each respective text box.
+19. Click the "Update button" to save the entered information and create your budget. You may create up to 3 different budgets with Student Saver.
+20. To view the budgets that you've created, click the "Home" subheading to see a detailed table breaking down each budget.
+21. To edit any of your budgets, click the Budget subheading which corresponds to the Budget you wish to edit or click the "Edit" button below the budget that you wish to edit on the "Home" page.
+22. Either option will take you to the corresponding Budget page from step 18- update your budget by entering any new information into the text boxes.
+23. Click the "Update" button to save the budget information.
+24. To delete any of your budgets, click the "Delete" button below the budget that you wish to delete on the "Home" page.
+25. To update your profile with your name and college/university, begin by clicking the "Profile" subheading.
+26. Click the "Edit" button on the "Profile" page to enter new profile information.
+27. Enter your full name and college/university into the corresponding text boxes.
+28. Click the "Update" button to save your profile information.
