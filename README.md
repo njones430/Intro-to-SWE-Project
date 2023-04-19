@@ -13,12 +13,22 @@ Gabriel West
 
 Application How-To
 -
-1. To begin the process of using our application, ensure that you have downloaded the four libraries required to use our application: Go, NodeJS, Cypress and Axios.
-2. If you have not already downloaded Go, install it here: https://go.dev/dl/
-3. If you have not already downloaded NodeJS, install it here: https://nodejs.org/en
-4. If you have not already downloaded Cypress, install it using this installation guide: https://docs.cypress.io/guides/getting-started/installing-cypress
-5. If you have not already downloaded Axious, install it using this installation guide: https://axios-http.com/docs/intro
+1. Begin by installing the project files for Student Saver from this GitHub page via a zip file.
+2. Unzip or move the project files for a directory of your choice.
+3. To begin the process of using Student Saver, ensure that you have downloaded the four libraries required to use our application: Go, NodeJS, Cypress and Axios.
+4. If you have not already downloaded Go, install it here: https://go.dev/dl/
+5. If you have not already downloaded NodeJS, install it here: https://nodejs.org/en
+6. If you have not already downloaded Cypress, install it using this installation guide: https://docs.cypress.io/guides/getting-started/installing-cypress
+7. If you have not already downloaded Axios, install it using this installation guide: https://axios-http.com/docs/intro
 
 Running The Application
 -
-6. 
+8. Once all application files and libraries are installed, begin running the application by opening a command line terminal.
+9. Using the cd command, set the terminal's directory to the "FullStack" folder of the Student Saver application files. (example command: "cd C:/.../Intro-to-SWE-Project/FullStack")
+10. Once the directory is set correctly, type and execute the command "go run main.go".
+11. Using the cd command, set the terminal's directory to the "src" subsection of the "loginPage" folder of the Student Saver application files. (example command: "cd C:/.../Intro-to-SWE-Project/FullStack/loginPage/src")
+12. Once the directory is set correctly, type and execute the command "run npm start".
+13. Watch as the Student Saver application home page appears on your screen.
+
+Using The Application
+-
