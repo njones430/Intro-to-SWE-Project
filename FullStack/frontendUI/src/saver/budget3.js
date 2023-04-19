@@ -25,21 +25,21 @@ function Budget3() {
   var textInput6 = React.createRef(); 
 
   const deletion = () => {
-    localStorage.removeItem("active3");
+    localStorage.removeItem(localStorage.getItem("email") + "active3");
     window.location.reload(false);
   };
 
   const create = () => {
-    localStorage.setItem("active3", 1);
-    localStorage.setItem("edit3", 1);
+    localStorage.setItem(localStorage.getItem("email") + "active3", 1);
+    localStorage.setItem(localStorage.getItem("email") + "edit3", 1);
   };
 
   const edit = () => {
-    localStorage.removeItem("edit3");
+    localStorage.removeItem(localStorage.getItem("email") + "edit3");
     window.location.reload(false);
   }
 
-  if (localStorage.getItem("active3") === null)
+  if (localStorage.getItem(localStorage.getItem("email") + "active3") === null)
   {
   return (
     <>
@@ -48,37 +48,37 @@ function Budget3() {
     <Form.Group className="mb-3" controlId="name">
       <Form.Label>Budget Name</Form.Label>
       <FormControl type="text" placeholder="Enter name for new budget" 
-      ref={textInput} onChange={() => localStorage.setItem("name3", textInput.current.value)}/>
+      ref={textInput} onChange={() => localStorage.setItem(localStorage.getItem("email") + "name3", textInput.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="tuition">
       <Form.Label>How much is your tuition this year?</Form.Label>
       <Form.Control type="number" placeholder="Tuition Cost" 
-      ref={textInput2} onChange={() => localStorage.setItem("cost3", textInput2.current.value)}/>
+      ref={textInput2} onChange={() => localStorage.setItem(localStorage.getItem("email") + "cost3", textInput2.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="rent">
       <Form.Label>What is your monthly rent?</Form.Label>
       <Form.Control type="number" placeholder="Monthly Rent" 
-      ref={textInput3} onChange={() => localStorage.setItem("rent3", textInput3.current.value)}/>
+      ref={textInput3} onChange={() => localStorage.setItem(localStorage.getItem("email") + "rent3", textInput3.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="books">
       <Form.Label>How much are your textbooks?</Form.Label>
       <Form.Control type="number" placeholder="Textbooks Cost" 
-      ref={textInput4} onChange={() => localStorage.setItem("book3", textInput4.current.value)}/>
+      ref={textInput4} onChange={() => localStorage.setItem(localStorage.getItem("email") + "book3", textInput4.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="wage">
       <Form.Label>If you have a job, what is your weekly rate?</Form.Label>
       <Form.Control type="number" placeholder="Weekly Wage" 
-      ref={textInput5} onChange={() => localStorage.setItem("wage3", textInput5.current.value)}/>
+      ref={textInput5} onChange={() => localStorage.setItem(localStorage.getItem("email") + "wage3", textInput5.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="scholarship">
       <Form.Label>How much money did you earn in scholarships this year?</Form.Label>
       <Form.Control type="number" placeholder="Scholarship Awards" 
-      ref={textInput6} onChange={() => localStorage.setItem("scholar3", textInput6.current.value)}/>
+      ref={textInput6} onChange={() => localStorage.setItem(localStorage.getItem("email") + "scholar3", textInput6.current.value)}/>
     </Form.Group>
 
     <Button variant="primary" type="submit"
@@ -91,7 +91,7 @@ function Budget3() {
     </>
   );
   }
-  if (localStorage.getItem("edit3") === null)
+  if (localStorage.getItem(localStorage.getItem("email") + "edit3") === null)
   {
   return (
     <>
@@ -102,38 +102,38 @@ function Budget3() {
       </Form.Text>
     <Form.Group className="mb-3" controlId="name">
       <Form.Label>Budget Name</Form.Label>
-      <FormControl type="text" placeholder={localStorage.getItem("name3")}
-      ref={textInput} onChange={() => localStorage.setItem("name3", textInput.current.value)}/>
+      <FormControl type="text" placeholder={localStorage.getItem(localStorage.getItem("email") + "name3")}
+      ref={textInput} onChange={() => localStorage.setItem(localStorage.getItem("email") + "name3", textInput.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="tuition">
       <Form.Label>How much is your tuition this year?</Form.Label>
-      <Form.Control type="number" placeholder={localStorage.getItem("cost3")}
-      ref={textInput2} onChange={() => localStorage.setItem("cost3", textInput2.current.value)}/>
+      <Form.Control type="number" placeholder={localStorage.getItem(localStorage.getItem("email") + "cost3")}
+      ref={textInput2} onChange={() => localStorage.setItem(localStorage.getItem("email") + "cost3", textInput2.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="rent">
       <Form.Label>What is your monthly rent?</Form.Label>
-      <Form.Control type="number" placeholder={localStorage.getItem("rent3")}
-      ref={textInput3} onChange={() => localStorage.setItem("rent3", textInput3.current.value)}/>
+      <Form.Control type="number" placeholder={localStorage.getItem(localStorage.getItem("email") + "rent3")}
+      ref={textInput3} onChange={() => localStorage.setItem(localStorage.getItem("email") + "rent3", textInput3.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="books">
       <Form.Label>How much are your textbooks?</Form.Label>
-      <Form.Control type="number" placeholder={localStorage.getItem("book3")}
-      ref={textInput4} onChange={() => localStorage.setItem("book3", textInput4.current.value)}/>
+      <Form.Control type="number" placeholder={localStorage.getItem(localStorage.getItem("email") + "book3")}
+      ref={textInput4} onChange={() => localStorage.setItem(localStorage.getItem("email") + "book3", textInput4.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="wage">
       <Form.Label>If you have a job, what is your weekly rate?</Form.Label>
-      <Form.Control type="number" placeholder={localStorage.getItem("wage3")}
-      ref={textInput5} onChange={() => localStorage.setItem("wage3", textInput5.current.value)}/>
+      <Form.Control type="number" placeholder={localStorage.getItem(localStorage.getItem("email") + "wage3")}
+      ref={textInput5} onChange={() => localStorage.setItem(localStorage.getItem("email") + "wage3", textInput5.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="scholarship">
       <Form.Label>How much money did you earn in scholarships this year?</Form.Label>
-      <Form.Control type="number" placeholder={localStorage.getItem("scholar3")}
-      ref={textInput6} onChange={() => localStorage.setItem("scholar3", textInput6.current.value)}/>
+      <Form.Control type="number" placeholder={localStorage.getItem(localStorage.getItem("email") + "scholar3")}
+      ref={textInput6} onChange={() => localStorage.setItem(localStorage.getItem("email") + "scholar3", textInput6.current.value)}/>
     </Form.Group>
 
     <Button variant="primary" type="submit"
@@ -146,7 +146,7 @@ function Budget3() {
     </>
   );
   }
-  var money = (Number(localStorage.getItem("cost3"))/-6) - Number(localStorage.getItem("rent3")) - (Number(localStorage.getItem("book3"))/6) + (Number(localStorage.getItem("wage3"))*4) + (Number(localStorage.getItem("scholar3"))/6);
+  var money = (Number(localStorage.getItem(localStorage.getItem("email") + "cost3"))/-6) - Number(localStorage.getItem(localStorage.getItem("email") + "rent3")) - (Number(localStorage.getItem(localStorage.getItem("email") + "book3"))/6) + (Number(localStorage.getItem(localStorage.getItem("email") + "wage3"))*4) + (Number(localStorage.getItem(localStorage.getItem("email") + "scholar3"))/6);
   var alert;
   if (money > 0) {
     alert = <Alert key='success' variant='success'>
@@ -163,30 +163,30 @@ function Budget3() {
         <Table striped bordered hover>
       <thead>
         <tr>
-          <th>{localStorage.getItem("name3")}</th>
+          <th>{localStorage.getItem(localStorage.getItem("email") + "name3")}</th>
           <th>Budget Value</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Tuition</td>
-          <td>-${localStorage.getItem("cost3")}</td>
+          <td>-${localStorage.getItem(localStorage.getItem("email") + "cost3")}</td>
         </tr>
         <tr>
           <td>Monthly Rent</td>
-          <td>-${localStorage.getItem("rent3")}</td>
+          <td>-${localStorage.getItem(localStorage.getItem("email") + "rent3")}</td>
         </tr>
         <tr>
           <td>Textbooks</td>
-          <td>-${localStorage.getItem("book3")}</td>
+          <td>-${localStorage.getItem(localStorage.getItem("email") + "book3")}</td>
         </tr>
         <tr>
           <td>Weekly Wage</td>
-          <td>+${localStorage.getItem("wage3")}</td>
+          <td>+${localStorage.getItem(localStorage.getItem("email") + "wage3")}</td>
         </tr>
         <tr>
           <td>Scholarship</td>
-          <td>+${localStorage.getItem("scholar3")}</td>
+          <td>+${localStorage.getItem(localStorage.getItem("email") + "scholar3")}</td>
         </tr>
       </tbody>
     </Table>

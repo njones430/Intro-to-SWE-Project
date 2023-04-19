@@ -42,14 +42,14 @@ function Profile() {
       </Form.Text>
     <Form.Group className="mb-3" controlId="name">
       <Form.Label>Enter your full name:</Form.Label>
-      <FormControl type="text" placeholder={localStorage.getItem("name4")}
-      ref={textInput} onChange={() => localStorage.setItem("name4", textInput.current.value)}/>
+      <FormControl type="text" placeholder={localStorage.getItem(localStorage.getItem("email") + "name4")}
+      ref={textInput} onChange={() => localStorage.setItem(localStorage.getItem("email") + "name4", textInput.current.value)}/>
     </Form.Group>
 
     <Form.Group className="mb-3" controlId="college">
       <Form.Label>Enter your college/university:</Form.Label>
-      <Form.Control type="text" placeholder={localStorage.getItem("college")}
-      ref={textInput2} onChange={() => localStorage.setItem("college", textInput2.current.value)}/>
+      <Form.Control type="text" placeholder={localStorage.getItem(localStorage.getItem("email") + "college")}
+      ref={textInput2} onChange={() => localStorage.setItem(localStorage.getItem("email") + "college", textInput2.current.value)}/>
     </Form.Group>
 
     <Button variant="primary" type="submit"
@@ -68,13 +68,19 @@ function Profile() {
         Full Name
     </h6>
     <h4>
-    {localStorage.getItem("name4")} 
+    {localStorage.getItem(localStorage.getItem("email") + "name4")} 
     </h4>
     <h6>
         College
     </h6>
     <h4>
-    {localStorage.getItem("college")}
+    {localStorage.getItem(localStorage.getItem("email") + "college")}
+    </h4>
+    <h6>
+        E-Mail
+    </h6>
+    <h4>
+    {localStorage.getItem("email")} 
     </h4>
     <Button onClick={() => create()}>Edit</Button>{' '}
     </>
