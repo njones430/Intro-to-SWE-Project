@@ -15,26 +15,12 @@ export const Login = (props) => {
         <div className="auth-form-container">
             <h1>StudentSaver</h1>
             <h2>Login</h2>
-            <form className="login-form" onSubmit={handleSubmit}>
-                <label htmlFor="email" className="email">Email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-                <label htmlFor="password" className="password">Password</label>
-                <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="yourPW" id="password" name="password" />
-                <button type="submit" >Log In</button>
-            </form>
             {/*This will let us switch between pages register and login */}
                 <div>
                 <a href="http://localhost:3000/google/login" rel="noopener noreferrer" class="google btn" className="google-btn">
                 <GoogleButton data-testid="googleBtn" id ="googleBtn"/>
                 </a>
                 </div>
-            {/*<li>
-            <Link to="/signin"> </Link>
-            <GoogleButton/>
-            </li>
-            <Outlet />
-            */}
-            <button className="link-btn" data-cy = "link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
         </div>
     )
 }
