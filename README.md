@@ -28,7 +28,9 @@ Running The Application
 10. Once the directory is set correctly, type and execute the command "go run main.go".
 11. Using the cd command, set the terminal's directory to the "src" subsection of the "loginPage" folder of the Student Saver application files. (example command: "cd C:/.../Intro-to-SWE-Project/FullStack/loginPage/src")
 12. Once the directory is set correctly, type and execute the command "run npm start".
-13. Watch as the Student Saver application home page appears on your screen.
+13. Using the cd command, set the terminal's directory to the "src" subsection of the "frontendUI" folder of the Student Saver application files. (example command: "cd C:/.../Intro-to-SWE-Project/FullStack/frontendUI/src")
+14. Once the directory is set correctly, type and execute the command "run npm start".
+15. Watch as the Student Saver application home page appears on your screen.
 
 Using The Application
 -
