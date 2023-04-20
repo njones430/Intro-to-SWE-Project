@@ -46,5 +46,5 @@ Using The Application
 24. To delete any of your budgets, click the "Delete" button below the budget that you wish to delete on the "Home" page.
 25. To update your profile with your name and college/university, begin by clicking the "Profile" subheading.
 26. Click the "Edit" button on the "Profile" page to enter new profile information.
-27. Enter your full name and college/university into the corresponding text boxes.
+27. Enter your full name and college/university into the corresponding text boxes. Note: You can not delete this information. Only update it. 
 28. Click the "Update" button to save your profile information.
