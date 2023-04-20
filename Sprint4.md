@@ -12,12 +12,30 @@ Work that we've completed for Sprint 4:
 
 Frontend/Cypress Unit Tests:
 
-- Test to check if email is used as a proper key to access information upon login
-- Test to ensure that users can logout and login as a different user
+- Test to check if email is used as a proper key to access information upon login (Sprint 4)
+- Test to ensure that users can logout and login as a different user (Sprint 4)
+- Tests for updating profile/budget information
+- Tests for calculation of monthly profit/loss
+- Tests for calculations using hourly/weekly wage
+- Tests for calculating budget for the whole year
+- Ensured that the submit button was present on the login page
+- Tested if Google's "sign-in" button rendered when our login page loads
+- Test to see if UI renders without crashing
+- Test to see if user input is stored correctly
+- Test to see if user information is deleted properly
+- Tested if button contains desired text (CYPRESS)
+- Clicking register-login button twice (CYPRESS)
+- Filling out a basic form (an email and password) automatically (CYPRESS)
 
 Backend Unit Tests:
 
-- 
+- Test that the backend processes a correct set of responses for the Scopes credential of the oauth2 authentication system 
+- Test that the backend processes a correct set of responses for the Endpoint credential of the oauth2 authentication system 
+- Test that the backend processes a correct response for the Client ID credential of the oauth2 authentication system (constants_test.go)
+- Test that the backend processes a correct response for the ClientSecret credential of the oauth2 authentication system (constants_test.go)
+- Test that the backend processes a correct response for the RedirectID credential of the oauth2 authentication system (constants_test.go)
+- Test that the backend processes a correct set of responses for the Scopes credential of the oauth2 authentication system (constants_test.go)
+- Test that the backend processes a correct response for the Endpoint credential of the oauth2 authentication system (constants_test.go)
 
 Backend Documentation:
 
