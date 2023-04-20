@@ -13,6 +13,7 @@ Frontend/Cypress Unit Tests:
 
 - Test to check if email is used as a proper key to access information upon login
 - Test to ensure that users can logout and login as a different user
+
 Backend Unit Tests:
 
 - 
