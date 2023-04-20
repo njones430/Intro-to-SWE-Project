@@ -10,6 +10,7 @@ Work that we've completed for Sprint 4:
 - Finalized Google account login functionality
 - Allows for basic CRUD operations for each separate google user
 - Sending information between backend and frontend
+- Altered user functionality for ease of access.
 
 Frontend/Cypress Unit Tests:
 
