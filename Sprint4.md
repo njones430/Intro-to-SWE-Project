@@ -9,12 +9,12 @@ Work that we've completed for Sprint 4:
 - Retooled navigation for website (back/forward buttons)
 - Finalized Google account login functionality
 
-Frontend/Cypress Unit Tests:
+Final Frontend/Cypress Unit Tests:
 
 - Test to check if email is used as a proper key to access information upon login
 - Test to ensure that users can logout and login as a different user
 
-Backend Unit Tests:
+Final Backend Unit Tests:
 
 - 
 
