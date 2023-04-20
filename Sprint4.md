@@ -70,7 +70,7 @@ The budget has several variables within its scope to track said informtaion:
     
 Functions
 -
-The API contains four distinct functions: create, delete, get, and edit. Each of these functions has an outlined JSON representation and internal variables which are elaborated on below.
+The API contains four distinct functions: create, replace, update, delete, get, and edit. Each of these functions has an outlined JSON representation and internal variables which are elaborated on below.
 
 - create: creates a new budget 
   - Path parameters: parent (a string that contains the name of the account that the budget is created in)
