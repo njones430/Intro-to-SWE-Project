@@ -7,6 +7,7 @@ Work that we've completed for Sprint 4:
 - Recreated API documentation for new API
 - Added functionality for "log-out" button
 - Retooled navigation for website (back/forward buttons)
+- Finalized Google acocunt login functionality
 
 Sprint 4 Frontend Unit Tests:
 
