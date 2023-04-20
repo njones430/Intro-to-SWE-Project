@@ -15,27 +15,11 @@ import Profile from './saver/profile';
 
 import './App.css';
 
-{/*const ExampleToast = ({ children }) => {
-  const [show, toggleShow] = useState(true);
-
-  return (
-    <>
-      {!show && <Button onClick={() => toggleShow(true)}>Show Toast</Button>}
-      <Toast show={show} onClose={() => toggleShow(false)}>
-        <Toast.Header>
-          <strong className="mr-auto">React-Bootstrap</strong>
-        </Toast.Header>
-        <Toast.Body>{children}</Toast.Body>
-      </Toast>
-    </>
-  );
-};*/}
-
 const App = () => (
   <Container className="p-3">
     <Container className="p-5 mb-4 bg-light rounded-3">
       <h1 className="header">Student Saver</h1>
-      <a href="http://localhost:3000/google/login" rel="noopener noreferrer" class="google btn" className="google-btn">
+      <a href="http://localhost:3007" rel="noopener noreferrer" class="google btn" className="google-btn">
       <Button variant="primary" style={{float: 'right'}}>Log Out</Button>
       </a>
     </Container>
