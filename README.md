@@ -32,8 +32,7 @@ Running The Application
 
 Using The Application
 -
-14. Begin using the application by creating an account with an email and password or a preexisting Google Account with the "Sign In with Google" button.
-15. If your account is tied to an email and password, click the Log In button after entering your information to get started.
+14. Begin using the application by creating an account with a preexisting Google Account with the "Sign In with Google" button.
 16. If your account is tied to a Google Account, select your Google account and login with your Google Account password to begin.
 17. After logging into the Home Screen, begin creating a Budget by clicking on any of the Budget subheadings: "Budget 1", "Budget 2" or "Budget 3".
 18. Once you have clicked a Budget subheading, the page will prompt you to create a Budget by entering several pieces of information into text boxes that indicate what information that you must enter to create the Budget. Enter said information into each respective text box.
