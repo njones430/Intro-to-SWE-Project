@@ -7,11 +7,16 @@ Work that we've completed for Sprint 4:
 - Recreated API documentation for new API
 - Added functionality for "log-out" button
 - Retooled navigation for website (back/forward buttons)
-- Finalized Google acocunt login functionality
+- Finalized Google account login functionality
 
-Sprint 4 Frontend Unit Tests:
+Frontend/Cypress Unit Tests:
 
-Sprint 4 Backend Unit Tests:
+- Test to check if email is used as a proper key to access information upon login
+- Test to ensure that users can logout and login as a different user
+
+Backend Unit Tests:
+
+- 
 
 Backend Documentation:
 
